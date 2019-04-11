@@ -11,16 +11,16 @@ defmodule Islands.Client.Mover do
   \n##### #{@course_ref}
   """
 
-  alias Islands.Engine
   alias Islands.Client.{IslandType, State}
+  alias Islands.Engine
 
-  @board_range 1..10
+  @coord_range 1..10
   @island_type_codes ["a", "d", "l", "s", "q"]
 
   @spec make_move(State.t()) :: State.t()
   def make_move(%State{move: [code, row, col]} = state)
-      when code in @island_type_codes and row in @board_range and
-             col in @board_range do
+      when code in @island_type_codes and row in @coord_range and
+             col in @coord_range do
     %State{game_name: game_name, player_id: player_id} = state
     island_type = IslandType.new(code)
     tally = Engine.position_island(game_name, player_id, island_type, row, col)
@@ -34,7 +34,7 @@ defmodule Islands.Client.Mover do
   end
 
   def make_move(%State{move: [row, col]} = state)
-      when row in @board_range and col in @board_range do
+      when row in @coord_range and col in @coord_range do
     %State{game_name: game_name, player_id: player_id} = state
     put_in(state.tally, Engine.guess_coord(game_name, player_id, row, col))
   end
