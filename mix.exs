@@ -4,7 +4,7 @@ defmodule Islands.Client.Mover.MixProject do
   def project do
     [
       app: :islands_client_mover,
-      version: "0.1.5",
+      version: "0.1.6",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       name: "Islands Client Mover",
@@ -48,7 +48,7 @@ defmodule Islands.Client.Mover.MixProject do
     [
       {:mix_tasks,
        github: "RaymondLoranger/mix_tasks", only: :dev, runtime: false},
-      {:persist_config, "~> 0.1"},
+      {:persist_config, "~> 0.2", runtime: false},
       {:islands_client_island_type, "~> 0.1"},
       {:islands_client_state, "~> 0.1"},
       {:islands_engine, "~> 0.2"},
