@@ -1,6 +1,6 @@
 # Islands Client Mover
 
-Makes a move in the _Game of Islands_.
+Lets a player makes a move in the _Game of Islands_.
 
 ## Installation
 

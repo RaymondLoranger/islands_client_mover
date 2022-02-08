@@ -3,7 +3,7 @@
 # └─────────────────────────────────────────────────────────────────┘
 defmodule Islands.Client.Mover do
   @moduledoc """
-  Makes a move in the _Game of Islands_.
+  Lets a player makes a move in the _Game of Islands_.
 
   ##### Inspired by the course [Elixir for Programmers](https://codestool.coding-gnome.com/courses/elixir-for-programmers) by Dave Thomas.
   """
@@ -14,6 +14,9 @@ defmodule Islands.Client.Mover do
   @coord_range 1..10
   @island_type_codes ["a", "d", "l", "s", "q"]
 
+  @doc """
+  Lets a player make a move in the _Game of Islands_.
+  """
   @spec make_move(State.t()) :: State.t()
   def make_move(%State{move: [code, row, col]} = state)
       when code in @island_type_codes and row in @coord_range and

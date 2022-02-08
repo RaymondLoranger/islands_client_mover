@@ -4,7 +4,7 @@ defmodule Islands.Client.Mover.MixProject do
   def project do
     [
       app: :islands_client_mover,
-      version: "0.1.20",
+      version: "0.1.21",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       name: "Islands Client Mover",
@@ -22,7 +22,7 @@ defmodule Islands.Client.Mover.MixProject do
 
   defp description do
     """
-    Makes a move in the Game of Islands.
+    Lets a player makes a move in the Game of Islands.
     """
   end
 
