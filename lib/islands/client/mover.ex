@@ -3,7 +3,7 @@
 # └─────────────────────────────────────────────────────────────────┘
 defmodule Islands.Client.Mover do
   @moduledoc """
-  Lets a player makes a move in the _Game of Islands_.
+  Lets a player make a move in the _Game of Islands_.
 
   ##### Inspired by the course [Elixir for Programmers](https://codestool.coding-gnome.com/courses/elixir-for-programmers) by Dave Thomas.
   """
